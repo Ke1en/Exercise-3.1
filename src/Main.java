@@ -1,15 +1,16 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         double userVarInput;
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Choose what to do:\n kg to pounds;\n pounds to kg;\n rubles to dollars;\n dollars to rubles;"
                 + "\n F temperature to C;\n C temperature to F.");
         String strToChoose = scanner.nextLine();
-
-        while (strToChoose != "exit") {
+        while (!Objects.equals(strToChoose, "exit")) {
             switch (strToChoose) {
                 case "kg to pounds":
                     System.out.println("Input weight in kg");
@@ -40,6 +41,12 @@ public class Main {
                     System.out.println("Input temperature in C");
                     userVarInput = scanner.nextDouble();
                     System.out.println(userVarInput + " C in F is " + ((userVarInput * 1.8) + 32));
+                    break;
+                case "exit":
+                    strToChoose = "exit";
+                    break;
+                default:
+                    System.out.println("Choose what to do again!");
                     break;
             }
             strToChoose = scanner.nextLine();
