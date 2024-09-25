@@ -5,8 +5,8 @@ public class Main {
         double userVarInput;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Choose what to do:\n kg to pounds;\n pounds to kg;\n rubles to dollars;\n dollars to rubles;" +
-                "\n F temperature to C;\n C temperature to F.");
+        System.out.println("Choose what to do:\n kg to pounds;\n pounds to kg;\n rubles to dollars;\n dollars to rubles;"
+                + "\n F temperature to C;\n C temperature to F.");
         String strToChoose = scanner.nextLine();
 
         while (strToChoose != "exit") {
