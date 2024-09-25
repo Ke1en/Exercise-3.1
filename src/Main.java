@@ -41,9 +41,6 @@ public class Main {
                     userVarInput = scanner.nextDouble();
                     System.out.println(userVarInput + " C in F is " + ((userVarInput * 1.8) + 32));
                     break;
-                default:
-                    System.out.println("Choose a right converter!");
-                    break;
             }
             strToChoose = scanner.nextLine();
         }
